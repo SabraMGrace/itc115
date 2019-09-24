@@ -1,4 +1,3 @@
-
 public class HelloWorld {
 
 	public static void main(String[] args) {
@@ -6,6 +5,8 @@ public class HelloWorld {
 		System.out.println("Hello World");
 		System.out.println();
 		System.out.println("This is Java");
+		System.out.println("This program produces \n four");
+		System.out.println("lines of \"output.\"");
 
 	}
 
