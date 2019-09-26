@@ -1,0 +1,35 @@
+//Does not work... unsure how to refactor to have drawVertical drawHorizontal functions repeat. Also unsure how to label each box...
+
+package helloSept25;
+
+public class boxes {
+
+	public static void main(String[] args) {
+		// use a loop to call drawBoxes
+		for (int i = 0; i < 5; i++) {
+			drawBoxes();
+			System.out.println();
+		}
+
+	}
+	
+	public static void drawBoxes() {
+		drawHorizontal();
+		drawVertical()
+		drawVertical()
+		drawVertical()
+		drawHorizontal();
+		
+	}
+
+	public static void drawHorizontal() {
+		System.out.println("*------*");
+	
+}
+
+	public static void drawVertical() {
+		System.out.println("|      |");
+		
+	}
+	
+}
