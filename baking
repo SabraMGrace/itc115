@@ -1,0 +1,57 @@
+/* Sabra Grace
+ * ITC 115 Fall 2019
+ * Baking
+ */
+
+package helloSept25;
+
+public class baking {
+
+	public static void main(String[] args) {
+		
+		//print 10 batches of cookies
+		for (int i = 1; i <=10; i++) {
+		
+		//batch
+		System.out.println("Batch One");
+		mixCookies();
+		bakeCookies();
+		decorateCookies();
+		System.out.println();
+		
+		// batch2
+		System.out.println("Batch Two");
+		mixCookies();
+		bakeCookies();
+		System.out.println();
+		
+	}
+
+
+	}
+	
+	//mix ingredients
+	public static void mixCookies() {
+		System.out.println("Gather wet ingredients");
+		System.out.println("Gather dry ingredients");
+		System.out.println("Combine ingredients");
+	}
+	
+	//bake cookies
+	public static void bakeCookies() {
+		System.out.println("Preheat oven to 350 degrees Fahrenheit");
+		System.out.println("Grease the cookie sheet");
+		System.out.println("Measure out 1/4 cup of cookie dough for each cookie");
+		System.out.println("Drop each cookie 2 inches apart");
+		System.out.println("Bake for 15 minutes");
+		System.out.println("Wait for cookies to cool for 1 hour");
+	}
+	
+	//decorate
+		public static void decorateCookies() {
+			System.out.println("Put the icing in the pastry bag");
+			System.out.println("Spread the icing on the cookies");	
+		}
+			
+			
+}
