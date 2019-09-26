@@ -13,14 +13,14 @@ public class baking {
 		for (int i = 1; i <=10; i++) {
 		
 		//batch
-		System.out.println("Batch One");
+		System.out.println("Batch of Decorated Cookies");
 		mixCookies();
 		bakeCookies();
 		decorateCookies();
 		System.out.println();
 		
 		// batch2
-		System.out.println("Batch Two");
+		System.out.println("Cookie Batch Without Icing");
 		mixCookies();
 		bakeCookies();
 		System.out.println();
@@ -28,6 +28,11 @@ public class baking {
 	}
 
 
+	}
+	
+	//cool cookies
+	public static void coolCookies() {
+		System.out.println("Cooling cookies");
 	}
 	
 	//mix ingredients
@@ -44,7 +49,7 @@ public class baking {
 		System.out.println("Measure out 1/4 cup of cookie dough for each cookie");
 		System.out.println("Drop each cookie 2 inches apart");
 		System.out.println("Bake for 15 minutes");
-		System.out.println("Wait for cookies to cool for 1 hour");
+		coolCookies();
 	}
 	
 	//decorate
