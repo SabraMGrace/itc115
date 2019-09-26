@@ -1,0 +1,31 @@
+//NEED TO FINISH, not working
+
+package helloSept25;
+
+public class drawHexagon {
+
+	public static void main(String[] args) {
+		// drawHexagon
+		
+		drawTopHex();
+		drawBottomHex();
+		drawBottomHex();
+		drawLine();
+
+	}
+	
+	public static void drawTopHex() {
+		System.out.println("   ______   ");
+		System.out.println("  /      \  ");
+		System.out.println(" /        \ ");
+		
+	}
+	
+	public static void drawBottomHex() {
+		System.out.println(" \          /");
+		System.out.println("  \        /");
+		System.out.println("   \______/ ");
+		
+	}
+
+}
