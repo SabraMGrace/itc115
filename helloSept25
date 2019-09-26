@@ -1,0 +1,16 @@
+/* Sabra Grace
+ *ITC 115, Fall 2019
+ *This program is a class exercise.
+ */
+
+package helloSept25;
+
+public class hello {
+
+	public static void main(String[] args) {
+		// print quote from Gettysburg Address
+		System.out.println("Four score and seven years ago, \n our 'fore fathers' brought forth \n on this continent \n a new nation.");
+
+	}
+
+}
