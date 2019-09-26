@@ -1,0 +1,24 @@
+package helloSept25;
+
+public class boxes {
+
+	public static void main(String[] args) {
+		// use a loop to call drawBoxes
+		for (int i = 0; i < 5; i++) {
+			drawBoxes();
+			System.out.println();
+		}
+
+	}
+	
+	public static void drawBoxes() {
+		System.out.println("*------*");
+		System.out.println("|      |");
+		System.out.println("|      |");
+		System.out.println("*------*");
+		
+
+		
+	}
+
+}
