@@ -1,0 +1,15 @@
+public class bmiCalculator {
+	
+	public static void main(String[] args) {
+		// Calculate the BMI
+
+		double height = 70;
+		double weight = 195;
+		double bmi;
+		
+		bmi = weight / (height + height) * 703;
+		
+		System.out.println("Current BMI: " + Math.round(bmi));
+
+	}
+}
