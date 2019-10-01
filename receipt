@@ -1,0 +1,50 @@
+//Sabra Grace
+//Compute GPA
+public class integer {
+
+	public static void main(String[] args) {
+// Calculate total owed, assuming 8% tax and 15% tip
+		double subtotal = 38 + 40 + 30;
+		double tax = subtotal * .08;
+		double tip = subtotal * .15;
+		double total = subtotal + tax + tip;
+		
+		System.out.println("Subtotal: $" + subtotal);
+		System.out.println("Tax: $" + tax);
+		System.out.println("Tip: $" + total);
+	}
+
+}
+
+
+/*
+//Sabra Grace
+//Compute GPA
+import java.text.NumberFormat;
+public class integer {
+	public static final double TAX = .08; // a constant (in the main)
+
+	public static void main(String[] args) {
+		//call the method
+		calculateBill(45.55, 0.20);
+	}
+	
+	public static double calculateBill (double subtotal, double tipPercent) {
+		// Calculate total owed
+				
+				double tax = subtotal * TAX;
+				double tip = subtotal * tipPercent;
+				double total = subtotal + tax + tip;
+				
+				NumberFormat cf1 = NumberFormat.getCurrencyInstance();
+				System.out.println(cf1.format(total));
+				
+				System.out.println("Subtotal: $" + subtotal);
+				System.out.println("Tax: $" + tax);
+				System.out.println("Tip: $" + total);
+				
+				return total;
+	}
+
+}
+/
