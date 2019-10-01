@@ -1,0 +1,15 @@
+public class integer {
+
+	public static void main(String[] args) {
+		// declare variables
+		int x = 5; // declare
+		
+		x = 42; // working with a declared variable
+		
+		x = x + 1;
+				
+		System.out.println(x);
+
+	}
+
+}
