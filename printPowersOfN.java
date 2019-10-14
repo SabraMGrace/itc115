@@ -11,9 +11,8 @@ public class PrintPowersOfN {
 	public static void main(String[] args) {
 		// This program prints the sequence for each power of the base of 0 up to that maximum power, inclusive.
 		
-		// Main function printPowersOfN
-		
-		System.out.println("This program prints the sequence for each power of the base up to the maximum power, inclusive (without importing the math class, per the textbook).\n");
+		// Define main function printPowersOfN
+		System.out.println("This program prints the sequence for each power of the base up to the maximum power, inclusive. \n(without importing the math class, per the textbook).\n");
 		System.out.println("The inclusive sequence of 2 to the power of 7 is: ");
 		printPowersOfN(2, 7);
 		System.out.println("\n \n" + "The inclusive sequence of 5 to the power of 3 is: ");
@@ -35,6 +34,4 @@ public class PrintPowersOfN {
 		}
 	}
 		
-
-		//System.out.println(printPowersOfN(x, y);)
 }
