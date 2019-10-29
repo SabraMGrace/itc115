@@ -1,4 +1,3 @@
-  
 //*******************************************************************
 // Midterm Project Program: printCards
 // Instructions: Write a program that reads a shorthand text description of a playing card and prints the longhand equivalent.
@@ -20,10 +19,12 @@ public class PrintCards {
 		String rank = console.next();
 		System.out.println("What is the card's suit (in shorthand)? \n Example: C for Clubs, etc. ");
 		String suit = console.next();
-		printCardName(rank, suit);	
+		printCardRank(rank);
+		printCardSuit(suit);
+		console.close();
 	}
-	// method to print the longhand card name.
-	public static void printCardName(String rank, String suit) {
+	// method to print the longhand card rank.
+	public static void printCardRank(String rank) {
 		if (rank.equalsIgnoreCase("A")) {
 			System.out.println("Ace of ");
 		} else if (rank.equalsIgnoreCase("K")) {
@@ -50,11 +51,19 @@ public class PrintCards {
 			System.out.println("Three of ");
 		} else if (rank.equalsIgnoreCase("2")) {
 			System.out.println("Two of ");
-		
-		
-
-		
+		}
 	}
+	// method to print the longhand card suit.
+		public static void printCardSuit(String suit) {
+			if (suit.equalsIgnoreCase("C")) {
+				System.out.println("Clubs");
+			} else if (suit.equalsIgnoreCase("D")) {
+				System.out.println("Diamonds");
+			} else if (suit.equalsIgnoreCase("H")) {
+				System.out.println("Hearts");
+			} else if (suit.equalsIgnoreCase("S")) {
+				System.out.println("Spades");
+			}
+		}
+}
 
-}
-}
