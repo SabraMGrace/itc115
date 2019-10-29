@@ -62,14 +62,14 @@ public class GPACalculator {
 	// create method to calculate GPA
 	public static Double gpaCalc() {
 		double gpa = 0.0;
-		System.out.println("How many classes have you taken at school? ");
+		System.out.println("How many classes has the student taken at school? ");
 		int numberOfClasses = console.nextInt();
 
 		double classGPA = 0.0;
 		double sum = 0.0;
 		
 		for (int i = 1; i <= numberOfClasses; i++) {
-			System.out.println("What is your GPA in this class? ");
+			System.out.println("What is the student's GPA in this class? ");
 			classGPA = console.nextInt();
 			sum += classGPA;
 		}
