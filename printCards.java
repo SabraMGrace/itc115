@@ -11,59 +11,67 @@ package printCards;
 import java.util.Scanner;
 
 public class PrintCards {
+	
+	private static Scanner console;
 
-	public static void main(String[] args, Scanner console) {
+	public static void main(String[] args) {
 		// main method for shorthand card input.
 		console = new Scanner(System.in);
-		System.out.println("What is the card's rank (in shorthand)? \n Example: K for King, 9, etc. ");
-		String rank = console.next();
-		System.out.println("What is the card's suit (in shorthand)? \n Example: C for Clubs, etc. ");
-		String suit = console.next();
-		printCardRank(rank);
-		printCardSuit(suit);
+		System.out.println("What is the card's rank (in shorthand)? \n (Example: K for King, 9, etc.) ");
+		String shortRank = console.next();
+		System.out.println("What is the card's suit (in shorthand)? \n (Example: C for Clubs, etc.) ");
+		String shortSuit = console.next();
+		String longRank = printCardRank(shortRank);
+		String longSuit = printCardSuit(shortSuit);
 		console.close();
+		System.out.println("Your card is the " + longRank + " of " + longSuit + ".");
 	}
 	// method to print the longhand card rank.
-	public static void printCardRank(String rank) {
-		if (rank.equalsIgnoreCase("A")) {
-			System.out.println("Ace of ");
-		} else if (rank.equalsIgnoreCase("K")) {
-			System.out.println("King of ");
-		} else if (rank.equalsIgnoreCase("Q")) {
-			System.out.println("Queen of ");
-		} else if (rank.equalsIgnoreCase("J")) {
-			System.out.println("Jack of ");
-		} else if (rank.equalsIgnoreCase("10")) {
-			System.out.println("Ten of ");
-		} else if (rank.equalsIgnoreCase("9")) {
-			System.out.println("Nine of ");
-		} else if (rank.equalsIgnoreCase("8")) {
-			System.out.println("Eight of ");
-		} else if (rank.equalsIgnoreCase("7")) {
-			System.out.println("Seven of ");
-		} else if (rank.equalsIgnoreCase("6")) {
-			System.out.println("Six of ");
-		} else if (rank.equalsIgnoreCase("5")) {
-			System.out.println("Five of ");
-		} else if (rank.equalsIgnoreCase("4")) {
-			System.out.println("Four of ");
-		} else if (rank.equalsIgnoreCase("3")) {
-			System.out.println("Three of ");
-		} else if (rank.equalsIgnoreCase("2")) {
-			System.out.println("Two of ");
+	public static String printCardRank(String shortRank) {
+		String longRank = "";
+		if (shortRank.equalsIgnoreCase("A")) {
+			longRank = "Ace";
+		} else if (shortRank.equalsIgnoreCase("K")) {
+			longRank = "King";
+		} else if (shortRank.equalsIgnoreCase("Q")) {
+			longRank = "Queen";
+		} else if (shortRank.equalsIgnoreCase("J")) {
+			longRank = "Jack";
+		} else if (shortRank.equalsIgnoreCase("10")) {
+			longRank = "Ten";
+		} else if (shortRank.equalsIgnoreCase("9")) {
+			longRank = "Nine";
+		} else if (shortRank.equalsIgnoreCase("8")) {
+			longRank = "Eight";
+		} else if (shortRank.equalsIgnoreCase("7")) {
+			longRank = "Seven";
+		} else if (shortRank.equalsIgnoreCase("6")) {
+			longRank = "Six";
+		} else if (shortRank.equalsIgnoreCase("5")) {
+			longRank = "Five";
+		} else if (shortRank.equalsIgnoreCase("4")) {
+			longRank = "Four";
+		} else if (shortRank.equalsIgnoreCase("3")) {
+			longRank = "Three";
+		} else if (shortRank.equalsIgnoreCase("2")) {
+			longRank = "Two";
 		}
+		return longRank;
 	}
+	
 	// method to print the longhand card suit.
-		public static void printCardSuit(String suit) {
-			if (suit.equalsIgnoreCase("C")) {
-				System.out.println("Clubs");
-			} else if (suit.equalsIgnoreCase("D")) {
-				System.out.println("Diamonds");
-			} else if (suit.equalsIgnoreCase("H")) {
-				System.out.println("Hearts");
-			} else if (suit.equalsIgnoreCase("S")) {
-				System.out.println("Spades");
-			}
+	public static String printCardSuit(String shortSuit) {
+		String longSuit = "";
+		if (shortSuit.equalsIgnoreCase("C")) {
+			longSuit ="Clubs";
+		} else if (shortSuit.equalsIgnoreCase("D")) {
+			longSuit = "Diamonds";
+		} else if (shortSuit.equalsIgnoreCase("H")) {
+			longSuit = "Hearts";
+		} else if (shortSuit.equalsIgnoreCase("S")) {
+			longSuit = "Spades";
 		}
+		return longSuit;
+	}
 }
 
