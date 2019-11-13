@@ -22,18 +22,29 @@ public class BoyGirl {
 	}
 // define boyGirl method.
 	public static void boyGirl(Scanner input) {
-		int boysTotal = 0;
-		int girlsTotal = 0;
+		int numberOfBoys = 0;
+		int numberOfGirls = 0;
+		int boysSum = 0;
+		int girlsSum = 0;
+		int difference = 0;
 		while (input.hasNext()) {
 			String name = input.next();
 			System.out.println(name);
-			System.out.println(input.nextInt());
-			if (name == "Erik" || name ==  "Tanner" || name == "Curtis" || name ==  "Ben") {
-				boysTotal = boysTotal++;
-			} else if (name == "Rita" || name == "Jillyn" || name == "Stefanie") {
-				girlsTotal++;
+			if (name.equals("Erik") || name.equals("Tanner") || name.equals("Curtis") || name.equals("Ben")) {
+				numberOfBoys += 1;
+				boysSum += input.nextInt();
+				System.out.println("a boy");
+			} else if (name.equals("Rita") || name.equals("Jillyn") || name.equals("Stefanie")) {
+				numberOfGirls += 1;
+				girlsSum += input.nextInt();
+				System.out.println("a girl");
+			} else {
+				System.out.println("neither");
 			}
 		}
-		System.out.println("There are " + boysTotal + " boys and " + girlsTotal + " girls.");
+		System.out.println("There are " + numberOfBoys + " boys and " + numberOfGirls + " girls.");
+		System.out.println(boysSum);
+		System.out.println(girlsSum);
+		System.out.println("The difference between the boys and girls added ages is: " + difference);
 	}
 }
