@@ -41,10 +41,9 @@ public class BoyGirl {
 			} else {
 				System.out.println("neither");
 			}
+			difference = girlsSum - boysSum;
 		}
 		System.out.println("There are " + numberOfBoys + " boys and " + numberOfGirls + " girls.");
-		System.out.println(boysSum);
-		System.out.println(girlsSum);
 		System.out.println("The difference between the boys and girls added ages is: " + difference);
 	}
 }
