@@ -13,7 +13,7 @@ package boyGirl;
 import java.io.*;
 import java.util.*;
 
-// create Scanner to pull file data.
+// create Scanner in main to pull file data.
 public class BoyGirl {
 	public static void main(String[] args) 
 			throws FileNotFoundException {
@@ -27,23 +27,21 @@ public class BoyGirl {
 		int boysSum = 0;
 		int girlsSum = 0;
 		int difference = 0;
+// create while loop to count the number of boys and girls. 
 		while (input.hasNext()) {
 			String name = input.next();
-			System.out.println(name);
 			if (name.equals("Erik") || name.equals("Tanner") || name.equals("Curtis") || name.equals("Ben")) {
 				numberOfBoys += 1;
 				boysSum += input.nextInt();
-				System.out.println("a boy");
 			} else if (name.equals("Rita") || name.equals("Jillyn") || name.equals("Stefanie")) {
 				numberOfGirls += 1;
 				girlsSum += input.nextInt();
-				System.out.println("a girl");
 			} else {
-				System.out.println("neither");
 			}
+// calculate the difference of girls' and boys' added ages.
 			difference = girlsSum - boysSum;
 		}
 		System.out.println("There are " + numberOfBoys + " boys and " + numberOfGirls + " girls.");
-		System.out.println("The difference between the boys and girls added ages is: " + difference);
+		System.out.println("The difference between the boys' and girls' added ages is: " + difference);
 	}
 }
