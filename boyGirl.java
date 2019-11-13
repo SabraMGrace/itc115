@@ -19,16 +19,21 @@ public class BoyGirl {
 			throws FileNotFoundException {
 		 Scanner input = new Scanner(new File("boysgirls.txt"));
 		 boyGirl(input);
-}
+	}
 // define boyGirl method.
 	public static void boyGirl(Scanner input) {
+		int boysTotal = 0;
+		int girlsTotal = 0;
 		while (input.hasNext()) {
 			String name = input.next();
-	        double sum = 0.0;
-	        while (input.hasNextDouble()) {
-	            sum += input.nextDouble();
-	        }
-	        System.out.println("Sum = " + sum + name);
-	}
+			System.out.println(name);
+			System.out.println(input.nextInt());
+			if (name == "Erik" || name ==  "Tanner" || name == "Curtis" || name ==  "Ben") {
+				boysTotal = boysTotal++;
+			} else if (name == "Rita" || name == "Jillyn" || name == "Stefanie") {
+				girlsTotal++;
+			}
+		}
+		System.out.println("There are " + boysTotal + " boys and " + girlsTotal + " girls.");
 	}
 }
