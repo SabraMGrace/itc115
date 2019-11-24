@@ -1,13 +1,10 @@
 //*******************************************************************
 // ITC 115 (Fall 2019)
 // sort
-// P. 523, ex. 4 Write a method isSorted that accepts an array…  50 points
-// Test your methods from the main. 
-// Do not use the built in sorting methods. Implements your own, or you will no get credit for this assignments.
-// https://practiceit.cs.washington.edu/problem/view/bjp4/chapter7/e4-isSorted
-// P. 524 ex 11 Write a method named isUnique...50 points
-// Test your method from the main. 
+// P. 523, ex. 4 Write a method isSorted that accepts an array… 
+// P. 524 ex 11 Write a method named isUnique...
 // Hint: You will need a nested for loop to solve this.
+// Test your methods from the main. 
 // By: Sabra Grace
 //*******************************************************************
 
