@@ -1,0 +1,43 @@
+//*******************************************************************
+// ITC 115 (Fall 2019)
+// sort
+// P. 523, ex. 4 Write a method isSorted that accepts an array…  50 points
+// Test your methods from the main. 
+// Do not use the built in sorting methods. Implements your own, or you will no get credit for this assignments.
+// https://practiceit.cs.washington.edu/problem/view/bjp4/chapter7/e4-isSorted
+// P. 524 ex 11 Write a method named isUnique...50 points
+// Test your method from the main. 
+// Hint: You will need a nested for loop to solve this.
+// By: Sabra Grace
+//*******************************************************************
+
+package sort;
+
+import java.util.Scanner;
+
+public class Sort {
+
+	public static void main(String[] args) {
+		// define main method isSorted to accept input of real numbers in ascending order.
+		// create Scanner for real numbers input.
+		Scanner console = new Scanner(System.in);
+		System.out.println("Enter 5 numbers with a space in between in ascending order. Then press enter.");
+		// int[] array = console.nextInt();
+		int[] array = new int[5];
+		isSorted(array);
+		// isUnique();
+	}
+	
+	public static boolean isSorted(int[] array) {
+		for(int i=1; i < array.length-1; i++) {
+			if (array[i] > array[i+1]) {
+			return false;
+			System.out.println("Try again. The numbers need to be entered in an increasing order.");
+		
+		}
+
+	}
+		return true;
+		System.out.println("The numbers are sorted in ascending order.");
+	}
+}
