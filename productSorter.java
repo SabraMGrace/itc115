@@ -13,3 +13,25 @@
 // By: Sabra Grace
 //*******************************************************************
 
+import java.awt.*;
+
+public class Product{
+    // public static void main(String[] args) {
+    private static int productCount = 0;
+
+    private String productName;
+    private String productDescription;
+    private int productCode;
+    private double productPrice;
+    
+    public int getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(int code) {
+        productCode = code;
+    } 
+
+public static void main(String[] args) {
+    Product dogToy = new Product();
+    dogToy.setProductCode = 11;
