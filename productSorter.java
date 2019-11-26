@@ -12,7 +12,6 @@
 // Optional: Keep track of the count of the products created and call the getCount method to verify that it is correct. (Where could you keep track of the count of products?)
 // By: Sabra Grace
 //*******************************************************************
-
 import java.text.NumberFormat;
 
 public class Product {
@@ -20,15 +19,15 @@ public class Product {
     String description;
     double price;
     int code;
-    int count;
+    static int count;
 
     // Construct a new product.
-    public Product(String initialName, String initialDescription, double initialPrice, int initialCode, int initialCount) {
+    public Product(String initialName, String initialDescription, double initialPrice, int initialCode) {
         name = initialName;
         description = initialDescription;
         price = initialPrice;
         code = initialCode;
-        count = initialCount;
+        count = count +1;
     }
     
     // Create setters.
@@ -61,25 +60,26 @@ public class Product {
     public int getCode() {
     	return this.code;
     }
-    public int getCount() {
-    	return this.count;
+    public static int getCount() {
+    	return count;
     }
     public String getPriceFormatted() {
     	String formattedPrice = NumberFormat.getCurrencyInstance().format(this.price);
     	return formattedPrice;
     }
     public String toString() {
-    	return " Name: " + name + "\n Description: " + description + "\n Price: " + this.getPriceFormatted() + "\n Code: " + code + "\n Count: " + count;
+    	return " Name: " + name + "\n Description: " + description + "\n Price: " + this.getPriceFormatted() + "\n Code: " + code;
     }
 
     public static void main(String args[]){
-        Product myProduct = new Product("dog toy", "it's a dog toy", 14.50, 12345, 200);
-        Product someOtherProduct = new Product("cat toy", "it's for cats", 99.99, 678, 77);
+        Product myProduct = new Product("Dog Toy", "It's a dog toy!", 14.50, 12345);
+        Product someOtherProduct = new Product("Cat Toy", "It's for cats!", 99.99, 678);
+    	System.out.println("Total product count is " + getCount());
+
         // Use setter.
         myProduct.setName("Gift Set");
-        System.out.println(myProduct.getName());
         // Use getter.
-        System.out.println(myProduct.getPrice());
+        System.out.println(myProduct.getName());
         // Change price using setter.
         myProduct.setPrice(30.00);
         // Print new price using getter.
