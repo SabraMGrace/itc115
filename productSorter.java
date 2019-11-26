@@ -13,25 +13,67 @@
 // By: Sabra Grace
 //*******************************************************************
 
-import java.awt.*;
+public class Product {
+    String name;
+    String description;
+    double price;
+    int code;
+    int count;
 
-public class Product{
-    // public static void main(String[] args) {
-    private static int productCount = 0;
-
-    private String productName;
-    private String productDescription;
-    private int productCode;
-    private double productPrice;
-    
-    public int getProductCode() {
-        return productCode;
+    // Construct a new product.
+    public Product(String initialName, String initialDescription, double initialPrice, int initialCode, int initialCount) {
+        name = initialName;
+        description = initialDescription;
+        price = initialPrice;
+        code = initialCode;
+        count = initialCount;
     }
+    
+    // Create setters.
+    public void setName(String newName) {
+    	this.name = newName;
+    }
+    public void setDescription(String newDescription) {
+    	this.description = newDescription;
+    }
+    public void setPrice(double newPrice) {
+    	this.price = newPrice;
+    }
+    public void setCode(int newCode) {
+    	this.code = newCode;
+    }
+    public void setCount(int newCount) {
+    	this.count = newCount;
+    }
+    
+    // Create getters.
+    public String getName(){
+    	return this.name;
+    }
+    public String getDescription() {
+    	return this.description;
+    }
+    public double getPrice() {
+    	return this.price;
+    }
+    public int getCode() {
+    	return this.code;
+    }
+    public int getCount() {
+    	return this.count;
+    }
+    
 
-    public void setProductCode(int code) {
-        productCode = code;
-    } 
-
-public static void main(String[] args) {
-    Product dogToy = new Product();
-    dogToy.setProductCode = 11;
+    public static void main(String args[]){
+        Product myProduct = new Product("dog toy", "it's a dog toy", 14.50, 12345, 200);
+        // Use setter.
+        myProduct.setName("Gift Set");
+        System.out.println(myProduct.getName());
+        // Use getter.
+        System.out.println(myProduct.getPrice());
+        // Change price using setter.
+        myProduct.setPrice(30.00);
+        // Print new price using getter.
+        System.out.println(myProduct.getPrice());             
+    }
+}
