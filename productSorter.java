@@ -13,6 +13,8 @@
 // By: Sabra Grace
 //*******************************************************************
 
+import java.text.NumberFormat;
+
 public class Product {
     String name;
     String description;
@@ -62,10 +64,17 @@ public class Product {
     public int getCount() {
     	return this.count;
     }
-    
+    public String getPriceFormatted() {
+    	String formattedPrice = NumberFormat.getCurrencyInstance().format(this.price);
+    	return formattedPrice;
+    }
+    public String toString() {
+    	return " Name: " + name + "\n Description: " + description + "\n Price: " + this.getPriceFormatted() + "\n Code: " + code + "\n Count: " + count;
+    }
 
     public static void main(String args[]){
         Product myProduct = new Product("dog toy", "it's a dog toy", 14.50, 12345, 200);
+        Product someOtherProduct = new Product("cat toy", "it's for cats", 99.99, 678, 77);
         // Use setter.
         myProduct.setName("Gift Set");
         System.out.println(myProduct.getName());
@@ -74,6 +83,8 @@ public class Product {
         // Change price using setter.
         myProduct.setPrice(30.00);
         // Print new price using getter.
-        System.out.println(myProduct.getPrice());             
+        System.out.println(myProduct.getPrice());   
+        System.out.println(myProduct.toString());
+        System.out.println(someOtherProduct.toString());
     }
 }
